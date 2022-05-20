@@ -12,9 +12,13 @@ services:
     build: .
     ports:
       # - local machine port:container port
-      - 3000:3000
+      - 4000:3000
     environment:
       PORT: 3000
-      MONGODB_URI: mongodb+srv://username:password@clustername.clusterid.mongodb.net/?retryWrites=true&w=majority
+      MONGODB_URI: mongodb+srv://uname:pwd@clustername.xyz.mongodb.net/?retryWrites=true&w=majority
       DB_NAME: products
-      NAME: 
+      NAME: Daniels
+    depends_on:
+      - mongo_db
+volumes:
+  mongo_db: {}
