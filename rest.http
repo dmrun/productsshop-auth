@@ -1,12 +1,12 @@
 ###Get a list of all products
-GET http://localhost:4000/products
+GET http://localhost:3000/products
 
 ### Create a product
 POST http://localhost:3000/products
 Content-Type: application/json
 
 {
-  "name": "iMac Pro 11.2",
+  "name1": "iMac Pro 11.2",
   "price": 222
 }
 

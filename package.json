@@ -5,7 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "prettier:check": "prettier --check src",
+    "prettier:write": "prettier --write src",
+    "test": "jest"
   },
   "author": "Me",
   "license": "ISC",
@@ -13,9 +16,14 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "http-errors": "^1.7.3",
-    "mongoose": "^5.7.13"
+    "mongoose": "^5.7.13",
+    "winston": "^3.7.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "eslint": "^8.16.0",
+    "jest": "^28.1.0",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.6.2",
+    "supertest": "^6.2.3"
   }
 }
