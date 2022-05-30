@@ -4,6 +4,7 @@ import {
     registerUser,
     loginUser,
     dashboardDisplay,
+    getAllUsers,
 } from '../Controllers/User.Controller.js';
 
 const authRouter = Router();
@@ -14,6 +15,9 @@ authRouter.use(bodyParser.urlencoded({ extended: false }));
 authRouter.get('/', (req, res) => {
     res.render('index.html');
 });
+
+const users = [{ name: 'Name' }];
+authRouter.get('/getAll', getAllUsers);
 
 authRouter.get('/register', (req, res) => {
     res.render('register');
